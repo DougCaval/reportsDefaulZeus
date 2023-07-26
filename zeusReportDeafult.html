@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Test Book Zeus Agrotech</title>
+        <style>
+            .description-field {
+                margin-bottom: 10px;
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    </head>
+    <center><img src="zeuslogo.jpg" alt="Logo da Empresa" class="logo" width="900" height="400">
+
+        <h1>Test Book Zeus Agrotech</h1>
+    </center>
+    <h3>Squad</h3>
+
+    <label>
+        <input type="checkbox" name="opcao1" value="opcao1" id="webValley">
+        Web Valley
+    </label><br>
+
+    <label>
+        <input type="checkbox" name="opcao2" value="opcao2">
+        Mobile Craft
+    </label><br>
+
+    <label>
+        <input type="checkbox" name="opcao3" value="opcao3">
+        Ingestion
+    </label>
+
+    <h3>Tipo</h3>
+
+    <label>
+        <input type="checkbox" name="opcao1" value="opcao1">
+        Melhoria
+    </label><br>
+
+    <label>
+        <input type="checkbox" name="opcao2" value="opcao2">
+        Bug
+    </label><br>
+
+    <label>
+        <input type="checkbox" name="opcao3" value="opcao3">
+        Incidente
+    </label>
+
+    <h3>Origem</h3>
+
+    <label>
+        <input type="checkbox" name="opcao1" value="opcao1">
+        Backlog do produto
+    </label><br>
+
+    <label>
+        <input type="checkbox" name="opcao2" value="opcao2">
+        Customer Service
+    </label><br>
+
+    <label>
+        <input type="checkbox" name="opcao3" value="opcao3">
+        Sprint
+    </label>
+    <p></p>
+    <br>
+    <hr>
+    <style>
+        input {
+            border: coral;
+            background-color: aliceblue;
+            outline: navajowhite;
+        }
+
+        textarea {
+            border: coral;
+            background-color: rgb(240, 243, 245);
+            outline: navajowhite;
+        }
+        image-input {
+            border: coral;
+            background-color: rgb(150, 179, 204);
+            outline: navajowhite;
+        }
+    </style>
+    <form id="myForm">
+        <label for="name">
+            <H3>Sprint de atuação</H3>
+        </label>
+        <style>
+            .carousel-container {
+                display: initial;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            .number {
+                font-size: 36px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    
+    <body  >
+        <div class="carousel-container">
+            <input type="range" min="1" max="50" step="1" value="1" id="numberSlider">
+            <span class="number" id="selectedNumber">1</span>
+        </div>
+
+        <script>
+            // Obtém o elemento do slider e do número selecionado
+            const numberSlider = document.getElementById('numberSlider');
+            const selectedNumber = document.getElementById('selectedNumber');
+
+            // Adiciona um ouvinte de eventos para atualizar o número selecionado
+            numberSlider.addEventListener('input', function () {
+                selectedNumber.innerText = numberSlider.value;
+            });
+        </script>
+        <br>
+
+        <label for="email">
+            <h3>Quality Analyst</h3>
+        </label><br>
+
+
+        <label>
+            <input type="checkbox" name="opcao1" value="opcao1">
+            Doug Caval
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="opcao2" value="opcao2">
+            Julia Gimenez
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="opcao3" value="opcao3">
+            Mariana
+        </label><br>
+        <label>
+            <input type="checkbox" name="opcao3" value="opcao3">
+            <input type="email" id="email" name="email" rows="1" cols="105" oninput="autoSize(this)" class="textarea" required><br><br>
+        </label>
+
+
+        <div id="objetivos">
+            <label for="description">Objetivos</label><br/>
+            <textarea id="description" name="description" rows="1" cols="105" oninput="autoSize(this)" class="textarea" required></textarea>
+        </div>
+
+        <div id="descricao">
+            <label for="description">Descrição</label><br/>
+            <textarea id="description" name="description" rows="1" cols="105" oninput="autoSize(this)" required></textarea>
+        </div>
+
+        <form>
+            <label for="imageInput">Imagens da história</label><br>
+            <input type="file" id="imageInput" name="imageInput" multiple onchange="previewImages(event)">
+            <br>
+            <div id="imagePreviewContainer"></div>
+        </form>
+
+        <script>
+            function previewImages(event) {
+                const input = event.target;
+                const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+                imagePreviewContainer.innerHTML = '';
+
+                if (input.files && input.files.length > 0) {
+                    for (let i = 0; i < input.files.length; i++) {
+                        const reader = new FileReader();
+                        const imagePreview = document.createElement('img');
+                        imagePreview.style.maxWidth = '300px';
+                        imagePreview.style.maxHeight = '300px';
+
+                        reader.onload = function (e) {
+                            imagePreview.src = e.target.result;
+                        }
+
+                        reader.readAsDataURL(input.files[i]);
+                        imagePreviewContainer.appendChild(imagePreview);
+                    }
+                }
+            }
+        </script>
+
+
+        <p></p>
+
+        <div id="ambienteteste">
+
+            <label for="email">
+                <h3>Ambiente de Teste</h3>
+            </label>
+
+            <label>
+                <input type="checkbox" name="opcao1" value="opcao1">
+                Desenvolvimento
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="opcao2" value="opcao2">
+                Homologação
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="opcao3" value="opcao3">
+                Produção
+            </label><br>
+        </div>
+        <hr>
+        <div id="descriptionContainer">
+            <label for="description">
+                <h1>Cenários de teste
+                </h1>
+                
+            </label><br/>
+
+        </div>
+
+        <div>
+
+            <script>
+                function autoSize(element) {
+                    element.style.height = "auto";
+                    element.style.height = element.scrollHeight + "px";
+                }
+            </script>
+
+            <button type="button" onclick="addDescriptionField()" style="background-color: rgb(228, 124, 27); color: white;">Adicionar cenário de teste</button>
+            <br>
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar campo para inserir imagem com preview</title>
+</head>
+<body>
+    <h1>Evidências dos testes</h1>
+    <button style="background-color: rgb(44, 134, 175); color: white;" onclick="adicionarCampo()">Adicionar imagens das evidências de teste</button><br>
+    <div id="camposImagens"></div>
+
+    <script>
+        let contador = 0;
+
+        function adicionarCampo() {
+            contador++;
+
+            const divCampo = document.createElement("div");
+            divCampo.innerHTML = `
+            <br>
+                <label for="idImagem${contador}">Título do cenário de teste ${contador}:</label>
+                <input type="text" id="idImagem${contador}" name="idImagem${contador}">
+                <br><br>
+                <label for="imagem${contador}">Imagem ${contador}:</label>
+                <input type="file" id="imagem${contador}" name="Cenário de teste ${contador}" accept="image/*" multiple onchange="previewImagens(event)">
+                <div id="previewImagens${contador}"></div>
+                <br>
+               
+                
+            `;
+
+            document.getElementById("camposImagens").appendChild(divCampo);
+        }
+
+        function previewImagens(event) {
+            const input = event.target;
+            const id = input.id.replace('imagem', '');
+            const previewDiv = document.getElementById(`previewImagens${id}`);
+            previewDiv.innerHTML = '';
+
+            if (input.files && input.files.length > 0) {
+                for (let i = 0; i < input.files.length; i++) {
+                    const reader = new FileReader();
+                    const img = document.createElement('img');
+
+                    reader.onload = function (e) {
+                        img.src = e.target.result;
+                        img.style.maxWidth = '800px';
+                        previewDiv.appendChild(img);
+                    }
+
+                    reader.readAsDataURL(input.files[i]);
+                }
+            }
+        }
+    </script>
+
+   
+</body>
+</html>
+
+           
+            </script>
+            <p></p>
+            <button onclick="window.print()" style="background-color: rgb(22, 124, 31); color: white;">SALVAR TEST BOOK EM PDF</button>
+        </form>
+
+        <script>
+
+            function previewImagesEvidence(event) {
+                const input = event.target;
+                const imagePreviewContainer = document.getElementById('imageEvidencePreviewContainer');
+
+                imagePreviewContainer.innerHTML = '';
+
+                if (input.files && input.files.length > 0) {
+                    for (let i = 0; i < input.files.length; i++) {
+                        const reader = new FileReader();
+                        const imagePreview = document.createElement('img');
+                        imagePreview.style.maxWidth = '300px';
+                        imagePreview.style.maxHeight = '300px';
+
+                        reader.onload = function (e) {
+                            imagePreview.src = e.target.result;
+                        }
+
+                        reader.readAsDataURL(input.files[i]);
+                        imagePreviewContainer.appendChild(imagePreview);
+                    }
+                }
+            }
+            function addDescriptionField() {
+                const descriptionContainer = document.getElementById('descriptionContainer');
+                const newDescriptionField = document.createElement('div');
+                newDescriptionField.innerHTML = `
+        <label for="description">Cenário de teste:</label>
+        <textarea id="description" name="description" rows="1" cols="105" oninput="autoSize(this)" required></textarea><br>
+        <p>
+        <label for="description">Dado que ...</label><br>
+        <textarea id="description" name="description" rows="1" cols="120" oninput="autoSize(this)" required></textarea><br>
+        <p>
+        <label for="description">Quando ...</label><br>
+        <textarea id="description" name="description" rows="1" cols="120" oninput="autoSize(this)" required></textarea><br>
+        <p>
+        <label for="and">E's ...</label><br>
+        <textarea id="description" name="description" rows="1" cols="120" oninput="autoSize(this)" required></textarea><br>
+        
+        <p>
+        <label for="description">Então ...</label><br>
+        <textarea id="description" name="description" rows="1" cols="120" oninput="autoSize(this)" required></textarea><br>
+        <p>
+            
+            
+            
+            <p>
+                
+           <hr>
+           <p>
+            <p>
+      `;
+
+                descriptionContainer.appendChild(newDescriptionField);
+            }
+        </script>
+
+
+    </body>
+</html>
