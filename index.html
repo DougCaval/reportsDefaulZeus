@@ -252,7 +252,7 @@
             divCampo.innerHTML = `
             <br>
                 <label for="idImagem${contador}">Título do cenário de teste ${contador}:</label>
-                <input type="text" id="idImagem${contador}" name="idImagem${contador}">
+                <input type="text" rows="1" cols="105" oninput="autoSize(this) id="idImagem${contador}" name="idImagem${contador}">
                 <br><br>
                 <label for="imagem${contador}">Imagem ${contador}:</label>
                 <input type="file" id="imagem${contador}" name="Cenário de teste ${contador}" accept="image/*" multiple onchange="previewImagens(event)">
